@@ -3,17 +3,17 @@ import Link from "next/link";
 export default () => (
   <div className="main-wrapper">
     <div className="main-link">
-      <Link href="/About">
+      <Link href="/about">
         <a>about</a>
       </Link>
     </div>
     <div className="main-link">
-      <Link href="/Portfolio">
+      <Link href="/portfolio">
         <a>portfolio</a>
       </Link>
     </div>
     <div className="main-link">
-      <Link href="/Contact">
+      <Link href="/contact">
         <a>contact</a>
       </Link>
     </div>
