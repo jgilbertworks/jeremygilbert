@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import RecentSkills from './components/RecentSkills';
-import Chart from './components/Chart';
+import RecentSkills from "./components/RecentSkills";
+import Chart from "./components/Chart";
 import Footer from "./components/Footer";
 // import { Animated } from "react-animated-css";
 // get our fontawesome imports
@@ -13,18 +13,19 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(fab);
 
 class About extends Component {
+  handleClick = e => {
+    e.preventDefault();
+    console.log("The link was clicked.");
+    window.location.assign("https://github.com/jgilbertworks");
+  };
 
-    handleClick = (e) => {
-        e.preventDefault();
-        console.log('The link was clicked.');
-        window.location.assign('https://github.com/jgilbertworks');
-      };
-    
-      handleClickTwo = (e) => {
-        e.preventDefault();
-        console.log('clicked');
-        window.location.assign('https://www.linkedin.com/in/jeremy-gilbert-41323329/');
-      };
+  handleClickTwo = e => {
+    e.preventDefault();
+    console.log("clicked");
+    window.location.assign(
+      "https://www.linkedin.com/in/jeremy-gilbert-41323329/"
+    );
+  };
 
   render() {
     return (
@@ -42,29 +43,40 @@ class About extends Component {
                   I'm a full stack web developer based in Oakland, California.
                 </p>
                 <div className="about-body">
-                  <p className='intro-text'>
-                    Entry-level Full Stack Web Developer with 3+ years
-                    professional experience in database administration, seeking
-                    to bring meaningful insights to data through visually
-                    striking web application development. I have a B.A. in Liberal
-                    Arts and Certificate of Completion in Full Stack web
-                    development from the University of California, Berkeley.
-                    Tenacious, detail-oriented, organized, positive attitude and
-                    motivated to succeed, with the passion and eagerness to
-                    excel and support a company's growth and success.
+                  <p className="intro-text">
+                    Full Stack Web Developer with 3+ years professional
+                    experience in database administration, seeking to bring
+                    meaningful insights to data through visually striking web
+                    application development. Has a B.A. in Liberal Arts from the
+                    University of California, Berkeley. Recently earned a
+                    certificate in Full Stack Development from the University of
+                    California, Berkeley, with newly developed skills in
+                    JavaScript, CSS, React.js, SQL/NoSQL, and responsive web
+                    design. Designed, built and manages an internal ticketing
+                    tool in Salesforce including custom code with over 28K
+                    closed tickets to date Skilled and motivated to work in
+                    progressive Bay Area companies whose missions benefit
+                    humanity through technology, that can utilize my skills and
+                    support my professional development. Possesses strong
+                    project planning and management skills. Tenacious,
+                    detail-oriented, organized, positive attitude and motivated
+                    to succeed, with the passion and eagerness to excel and
+                    support a company's growth and success.
                   </p>
                 </div>
               </div>
 
               <div className="icon-wrapper">
-                <FontAwesomeIcon onClick={this.handleClickTwo}
+                <FontAwesomeIcon
+                  onClick={this.handleClickTwo}
                   className="icon"
                   cursor={"pointer"}
                   icon={["fab", "linkedin"]}
                   size="5x"
                 />
 
-                <FontAwesomeIcon onClick={this.handleClick}
+                <FontAwesomeIcon
+                  onClick={this.handleClick}
                   className="icon"
                   cursor={"pointer"}
                   icon={["fab", "github-square"]}
@@ -78,8 +90,8 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <RecentSkills/>
-        <Chart/>
+        <RecentSkills />
+        <Chart />
         <Footer />
         <style jsx>{`
           .about-wrapper {
