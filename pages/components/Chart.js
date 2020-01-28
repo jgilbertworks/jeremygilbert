@@ -69,7 +69,7 @@ class SkillChart extends Component {
       <div className="chart-wrapper">
         <div>
           <ul>
-            <h1>front</h1>
+            <h1 className='list-header'>front</h1>
             <li className="fa">
               <FontAwesomeIcon icon={["fab", "html5"]} size="3x" />
             </li>
@@ -100,7 +100,7 @@ class SkillChart extends Component {
         </div>
         <div>
           <ul>
-            <h1>back</h1>
+            <h1 className='list-header'>back</h1>
             <li>
               <FontAwesomeIcon icon={["fab", "python"]} size="3x" />
             </li>
@@ -121,7 +121,8 @@ class SkillChart extends Component {
         <style jsx>{`
           .chart-wrapper {
             display: grid;
-            padding: 100px 100px 0px 100px;
+            // padding: 100px 100px 0px 100px;
+            padding: 2rem;
             border-top: 1px solid lightgray;
             grid-template-columns: 1fr 60% 1fr;
             background-color: whitesmoke;
@@ -159,9 +160,29 @@ class SkillChart extends Component {
               grid-template-rows: 1fr 60% 1fr;
               display: block;
             }
+            ul {
+              display: flex;
+              justify-content: space-between;
+            }
+            .li {
+              margin: .05rem;
+              padding: .05rem;
+            }
+            .list-header {
+              display: none;
+            }
+          }
+          @media (max-width: 960px) {
           }
 
           @media (max-width: 768px) {
+            ul {
+              display: flex;
+              justify-content: space-between;
+            }
+            .list-header {
+              display: none;
+            }
           }
 
           @media (max-width: 425px) {
