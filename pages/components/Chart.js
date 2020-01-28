@@ -72,6 +72,7 @@ class SkillChart extends Component {
             <h1 className='list-header'>front</h1>
             <li className="fa">
               <FontAwesomeIcon icon={["fab", "html5"]} size="3x" />
+              
             </li>
             <li className="fa">
               <FontAwesomeIcon icon={["fab", "css3"]} size="3x" />
