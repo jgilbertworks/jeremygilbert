@@ -347,7 +347,7 @@ class Portfolio extends Component {
             max-width: 400px;
             height: 505px;
             border: 1px solid lightgray;
-            border-radius: 30px;
+            border-radius: 10px;
             margin: 40px 0px 0px 0px;
             margin: 2rem 0px 0px 0px;
             box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
@@ -363,7 +363,7 @@ class Portfolio extends Component {
             width: 100%;
             height: 250px;
             border: 1px solid lightgray;
-            border-radius: 30px;
+            border-radius: 10px;
             background-color: white;
             max-width: 400px;
             min-width: 200px;
@@ -383,7 +383,7 @@ class Portfolio extends Component {
             max-width: 400px;
             height: 550px;
             border: 1px solid lightgray;
-            border-radius: 30px;
+            border-radius: 10px;
             box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
             
           }
@@ -394,7 +394,7 @@ class Portfolio extends Component {
             width: 100%;
             height: 505px;
             border: 1px solid lightgray;
-            border-radius: 30px;
+            border-radius: 10px;
             min-width: 200px;
             max-width: 400px;
             margin: 0px 0px 2rem 0px;
@@ -409,7 +409,7 @@ class Portfolio extends Component {
             max-width: 400px;
             height: 520px;
             border: 1px solid lightgray;
-            border-radius: 30px;
+            border-radius: 10px;
             // margin: 60px 0px 0px 0px;
             margin: 2rem 0px 0px 0px;
             overflow: none;

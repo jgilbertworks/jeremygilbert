@@ -50,7 +50,7 @@ class Contact extends Component {
               />
             </div>
             <h1 className='contact-header'>jgilberworks@gmail.com</h1>
-          <h1 className='contact-header'>(510) 681-3855</h1>
+          <a href='tel:510-681-3855' className='contact-header'>(510) 681-3855</a>
           </div>
         </div>
         <Footer />
@@ -79,6 +79,23 @@ class Contact extends Component {
             align-self: center;
             text-align: center;
             margin: 1rem;
+            cursor: pointer;
+          }
+
+          .icon:hover {
+
+          }
+
+          // media queries 
+          @media (max-width: 425px) {
+            .contact-header {
+              font-size: 24px;
+            }
+          }
+          @media (max-width: 320px) {
+            .contact-header {
+              font-size: 20px;
+            }
           }
         `}</style>
       </div>
