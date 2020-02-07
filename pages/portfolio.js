@@ -17,11 +17,11 @@ import {
 class Portfolio extends Component {
   render() {
     return (
-      <div>
-      <div className='master-wrapper'>
+      <div className='main-container'>
+
         <Header />
-        <div className="portfolio-wrapper">
-          <div className="portfololio-container">
+
+          <div className="portfolio-container">
             <section className="intro-card">
               <aside className="card-img">
                 <img className="card-photo" src="/jpg.jpg" alt="my image" />
@@ -199,32 +199,20 @@ class Portfolio extends Component {
               </section>
             </div>
           </div>
-        </div>
+
         <Footer />
-        </div>
+
         <style jsx>{`
-        .master-wrapper {
-          display: grid;
-          grid-template-columns: 1fr;
-        }
-          .portfolio-wrapper {
-            display: grid;
-            height: 190vh;
-            min-height: 0;
-            margin: 2rem;
-            padding: 2rem;
-            font-family: "Arial";
-            // overflow: none;
+          .main-container {
+            font-family: 'Arial';
           }
           .portfolio-container {
             display: grid;
             grid-template-columns: 1fr;
-            padding: 30px 30px 30px 30px;
-            // width: 100%;
-            // height: 1.5vh;
-            // margin: 1rem;
-            // padding: 1rem;
+            margin: 2rem;
+            // min-height: 100vh; /* will cover the 100% of viewport */
             text-align: center;
+
           }
           .intro-card {
             display: grid;
@@ -235,8 +223,8 @@ class Portfolio extends Component {
             background: white;
             border-radius: 100px;
             border: 1px solid lightgray;
-            margin: 0px 0px 2rem 0px;
-            box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);j,
+            margin: 2rem 0px 2rem 0px;
+            // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
           }
           .intro-card-text {
             text-align: left;
@@ -251,8 +239,6 @@ class Portfolio extends Component {
             font-size: 24px;
             font-weight: lighter;
             color: gray;
-            // margin: 1rem;
-            // overflow: none;
           }
           .card-img {
             display: grid;
@@ -285,7 +271,7 @@ class Portfolio extends Component {
           .body-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 1fr 1fr;
             grid-gap: 50px;
           }
           .overview-portfolio {
@@ -332,8 +318,6 @@ class Portfolio extends Component {
             width: 20px;
             border-radius: 100%;
             background-color: orange;
-            // justify-self:center;
-            // align-self:center;
           }
 
           // portfolio containers
@@ -350,7 +334,7 @@ class Portfolio extends Component {
             border-radius: 10px;
             margin: 40px 0px 0px 0px;
             margin: 2rem 0px 0px 0px;
-            box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
+            // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
           }
 
           .overview-card {
@@ -369,11 +353,8 @@ class Portfolio extends Component {
             min-width: 200px;
             // padding: 0px 0px 20px 0px;
             margin: 0px 0px 2rem 0px;
-            box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
+            // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
           }
-          // .overview-card {
-          //   margin: 0px 0px 2rem 0px;
-          // }
           .front-end-container {
             display: grid;
             grid-template-columns: 1fr;
@@ -384,8 +365,7 @@ class Portfolio extends Component {
             height: 550px;
             border: 1px solid lightgray;
             border-radius: 10px;
-            box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
-            
+            // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
           }
           .back-container {
             display: grid;
@@ -398,7 +378,7 @@ class Portfolio extends Component {
             min-width: 200px;
             max-width: 400px;
             margin: 0px 0px 2rem 0px;
-            box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
+            // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
           }
           .mobile-container {
             display: grid;
@@ -413,7 +393,7 @@ class Portfolio extends Component {
             // margin: 60px 0px 0px 0px;
             margin: 2rem 0px 0px 0px;
             overflow: none;
-            box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
+            // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
           }
 
           // portfolio header & overviews
@@ -565,7 +545,7 @@ class Portfolio extends Component {
             .portfolio-container {
               display: grid;
               grid-template-columns: 1fr;
-              grid-template-rows: 1fr 1fr 1fr;
+              grid-template-rows: 1fr;
             }
             .body-wrapper {
               display: grid;
@@ -584,13 +564,10 @@ class Portfolio extends Component {
               justify-self: end;
               align-self: end;
             }
-            .portfolio-wrapper {
-              height: 250vh;
-            }
             .portfolio-container {
               display: grid;
               grid-template-columns: 1fr;
-              grid-template-rows: 1fr 1fr 1fr;
+              grid-template-rows: 1fr;
             }
             .body-wrapper {
               display: grid;
@@ -620,11 +597,13 @@ class Portfolio extends Component {
               margin: 0 auto;
               margin-top: 3rem;
             }
-
+            .overview-container {
+              display:none;
+            }
             .body-wrapper {
               display: grid;
               grid-template-columns: 1fr;
-              grid-template-rows: 1fr;
+              grid-template-rows: 1fr 1fr 1fr 1fr;
             }
             .front-end-container {
               grid-column: 1/2;
@@ -645,8 +624,8 @@ class Portfolio extends Component {
           }
 
           @media (max-width: 768px) {
-            .portfolio-wrapper {
-              height: 420vh;
+            .portfolio-container {
+              
             }
             .intro-card {
               max-width: 100%;
@@ -658,16 +637,21 @@ class Portfolio extends Component {
               align-self: end;
               margin: 3rem 0px 0px 0px;
             }
-            .overview-container,
+
             .interactive-container {
               margin: 0 auto;
               margin-top: 3rem;
             }
 
+            .overview-container {
+              display:none;
+            }
+
             .body-wrapper {
               display: grid;
               grid-template-columns: 1fr;
-              grid-template-rows: 1fr;
+              grid-template-rows: 1fr 1fr 1fr 1fr;
+              
             }
             .front-end-container {
               grid-column: 1/2;
@@ -677,7 +661,8 @@ class Portfolio extends Component {
             .back-container {
               grid-column: 1/2;
               grid-row: 3/4;
-              margin: 0 auto;
+              // margin: 0 auto;
+              // margin-top: 700px;
             }
             .mobile-container {
               grid-column: 1/2;
@@ -689,7 +674,7 @@ class Portfolio extends Component {
 
           @media (max-width: 600px) {
             .portfolio-wrapper {
-              height: 410vh;
+              // height: 410vh;
             }
             .intro-card {
               display: grid;
@@ -717,7 +702,7 @@ class Portfolio extends Component {
             .portfolio-wrapper {
               display: grid;
               margin: .05rem;
-              height: 410vh;
+              // height: 410vh;
             }
             .intro-card {
               grid-template-columns: 1fr;
@@ -740,7 +725,7 @@ class Portfolio extends Component {
             }
             @media (max-width: 320px) {
               .portfolio-wrapper {
-                height: 480vh;
+                // height: 480vh;
                 margin: .05rem;
               }
               .portfolio-container {

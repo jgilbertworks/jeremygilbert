@@ -20,6 +20,13 @@ class Footer extends Component {
             font-family: "Arial";
             // margin: 1rem;
             // padding: 1rem;
+            // position: absolute;
+            // bottom: 0;
+            // width: 100%;
+            // margin-top: 100vh;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
             
           }
 
