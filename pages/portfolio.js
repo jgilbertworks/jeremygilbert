@@ -15,6 +15,16 @@ import {
 } from "react-twitter-embed";
 
 class Portfolio extends Component {
+  interactiveClickOne = e => {
+    e.preventDefault();
+    console.log('clicked');
+    window.location.assign('https://shielded-woodland-97189.herokuapp.com/');
+  }
+  giftasticClick = e => {
+    e.preventDefault();
+    console.log('clicked');
+    window.location.assign('https://jgilbertworks.github.io/GifTastic/');
+  }
   render() {
     return (
       <div className='main-container'>
@@ -64,16 +74,18 @@ class Portfolio extends Component {
                   </aside>
                   <aside className="interactive-one">
                     <img
+                      onClick={this.interactiveClickOne}
                       className="interactive-img-one"
-                      src="/mealmusic.png"
-                      alt="image 1"
+                      src="/memory.png"
+                      alt="memory game"
                     />
                   </aside>
                   <aside className="interactive-two">
                     <img
+                      onClick={this.giftasticClick}
                       className="interactive-img-two"
-                      src="/mealmusic.png"
-                      alt="image 2"
+                      src="/giftastic.png"
+                      alt="giftastic"
                     />
                     <img
                       className="interactive-img-three"
@@ -213,6 +225,12 @@ class Portfolio extends Component {
             // min-height: 100vh; /* will cover the 100% of viewport */
             text-align: center;
 
+          }
+          img {
+            border: 1px solid lightgray;
+          }
+          img:hover {
+            cursor: pointer;
           }
           .intro-card {
             display: grid;
