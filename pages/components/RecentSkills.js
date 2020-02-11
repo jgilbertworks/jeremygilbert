@@ -1,43 +1,81 @@
 import React, { Component } from "react";
 
 class RecentSkills extends Component {
+  codeHubClick = e => {
+    e.preventDefault();
+    window.location.assign("https://limitless-bayou-67971.herokuapp.com/");
+  };
+  clickyGame = e => {
+    e.preventDefault();
+    window.location.assign("https://shielded-woodland-97189.herokuapp.com/");
+  };
+  petFinder = e => {
+    e.preventDefault();
+    window.location.assign("https://cryptic-gorge-70462.herokuapp.com/");
+  }
+  mealMusic = e => {
+    e.preventDefault();
+    window.location.assign("https://jgilbertworks.github.io/meal-music/");
+  }
   render() {
     return (
       <div className="wrapper">
         <div className="recent-work">
-          <h1 className='recent-header'>recent work</h1>
+          <h1 className="recent-header">recent work</h1>
         </div>
         <div className="recent-container">
-        <div>
-          <div className="main-card">
-            <img className="skill-photo" src="/codehub.png" alt="my image" />
-          </div>
-          <p className='work-description'>codeHub: a social network for developers</p>
-          </div>
-          
           <div>
-          <div className="main-card">
-            <img className="skill-photo" src="/memory.png" alt="my image" />
-          </div>
-          <p className='work-description'>Clicky Game: a memory game made in React.js</p>
+            <div className="main-card">
+              <img 
+                onClick={this.codeHubClick}
+                className="skill-photo" 
+                src="/codehub.png" 
+                alt="codeHub" />
+            </div>
+            <p className="work-description">
+              codeHub: a social network for developers
+            </p>
           </div>
 
           <div>
-          <div className="main-card">
-            <img className="skill-photo" src="/mealmusic.png" alt="my image" />
-          </div>
-          <p className='work-description'>Meal Music: pair your favorite restaurant and playlist</p>
+            <div className="main-card">
+              <img 
+                onClick={this.clickyGame}
+                className="skill-photo" 
+                src="/memory.png" 
+                alt="memory game" />
+            </div>
+            <p className="work-description">
+              Clicky Game: a memory game made in React.js
+            </p>
           </div>
 
-        <div>
-          <div id="card4" className="main-card">
-            <img
-              className="skill-photo"
-              src="/petfinder-3.png"
-              alt="my image"
-            />
+          <div>
+            <div className="main-card">
+              <img
+                onClick={this.mealMusic}
+                className="skill-photo"
+                src="/mealmusic.png"
+                alt="my image"
+              />
+            </div>
+            <p className="work-description">
+              Meal Music: pair your favorite restaurant and playlist
+            </p>
           </div>
-          <p className='work-description'>Lost & Hound: report missing and lost pets</p>
+
+          <div>
+            <div id="card4" className="main-card">
+              <img
+                onClick={this.petFinder}
+                className="skill-photo"
+                src="/petfinder-3.png"
+                alt="pet finder"
+              />
+            </div>
+            <p className="work-description">
+              Lost & Hound: report missing and lost pets
+            </p>
           </div>
         </div>
         <style jsx>{`
@@ -47,7 +85,6 @@ class RecentSkills extends Component {
             grid-template-rows: 1fr;
             margin: 1rem;
             font-family: "Arial";
-            
           }
           .recent-header {
             margin: 2rem;
@@ -71,12 +108,12 @@ class RecentSkills extends Component {
             max-width: 300px;
             border-radius: 5px;
             margin: 1rem;
-            border: .5px solid lightgray;
+            border: 0.5px solid lightgray;
             // box-shadow: -12px 12px 2px 1px rgba(30, 30, 31, 0.2);
             background-color: whitesmoke;
             transition: transform 0.5s ease;
             overflow: hidden;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
           }
           .main-card:hover {
             transform: scale(1.1);
